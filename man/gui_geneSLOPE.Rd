@@ -7,7 +7,7 @@
 gui_geneSLOPE()
 }
 \value{
-null
+No return value, called for side effects
 }
 \description{
 A graphical user interface for performing Genome-wide
@@ -16,4 +16,3 @@ Association Study with SLOPE
 \details{
 requires installing \pkg{\link[shiny]{shiny}} package
 }
-

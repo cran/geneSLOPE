@@ -7,11 +7,13 @@
 \method{print}{screeningResult}(x, ...)
 }
 \arguments{
-\item{x}{screeningResult class object}
+\item{x}{\code{\link{screeningResult}} class object}
 
 \item{...}{Further arguments to be passed to or from other methods. They are ignored in this function.}
+}
+\value{
+No return value, called for side effects
 }
 \description{
 Print function for class screeningResult class
 }
-

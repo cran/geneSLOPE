@@ -7,9 +7,12 @@
 identify_clump(x, ...)
 }
 \arguments{
-\item{x}{appropiate class object}
+\item{x}{appropriate class object}
 
 \item{...}{other arguments}
+}
+\value{
+No return value, called for side effects
 }
 \description{
 identify_clump
@@ -18,4 +21,3 @@ identify_clump
 Enable interactive selection of snps in plot.
 Return clump number.
 }
-

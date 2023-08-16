@@ -22,9 +22,11 @@ NULL
 
 #' Print function for class screeningResult class
 #'
-#' @param x screeningResult class object
+#' @param x \code{\link{screeningResult}} class object
 #' @param ... Further arguments to be passed to or from other methods. They are ignored in this function.
 #' @export
+#' 
+#' @return No return value, called for side effects
 #'
 #' @method print screeningResult
 print.screeningResult <- function(x, ...){
@@ -46,9 +48,11 @@ print.screeningResult <- function(x, ...){
 
 #' Summary function for class screeningResult
 #'
-#' @param object screeningResult class object
+#' @param object \code{\link{screeningResult}} class object
 #' @param ... Further arguments to be passed to or from other methods. They are ignored in this function.
 #' @export
+#' 
+#' @return No return value, called for side effects
 #'
 #' @method summary screeningResult
 summary.screeningResult <- function(object, ...){

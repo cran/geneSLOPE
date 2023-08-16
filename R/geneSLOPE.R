@@ -5,30 +5,29 @@
 #' method for estimating the vector of coefficients in linear model. For details
 #' about it see references.
 #'
-#' @details GWAS is splitted into three steps.
+#' @details GWAS is split into three steps:
 #' \itemize{
 #' \item In the first step data is read using \pkg{\link{bigmemory}} package and immediatly
-#' screened using marginal tests for each SNP
+#' screened using marginal tests for each Single Nucleotide Polymorphism (\emph{SNP})
 #' \item SNPs are clumped based on their correlations
 #' \item SLOPE is performed on data where each clump has
 #' one representative (therefore we ensure that variables in linear model
-#' are not strognly correlated)
+#' are not strongly correlated)
 #' }
-#' Version: 0.37.0
+#' Version: 0.38.2
 #'
 #' @docType package
 #' @name geneSLOPE
 #' @import ggplot2
 #' @importFrom grid downViewport grid.locator upViewport
 #' @importFrom SLOPE SLOPE
-#' @importFrom SLOPE create_lambda
-#' @importFrom stats aggregate cor lm lm.fit pf var
+#' @importFrom stats aggregate cor lm lm.fit pf var qnorm
 #' @importFrom utils head read.table setTxtProgressBar tail txtProgressBar
 #' @importFrom bigmemory read.big.matrix
 #' @author{
 #' Malgorzata Bogdan, Damian Brzyski, Emmanuel J. Candes, Christine Peterson, Chiara Sabatti, Piotr Sobczyk
 #'
-#' Maintainer: Piotr Sobczyk \email{Piotr.Sobczyk@@pwr.edu.pl}
+#' Maintainer: Piotr Sobczyk \email{pj.sobczyk@@gmail.com}
 #' }
 #' @references \emph{SLOPE -- Adaptive Variable Selection via Convex Optimization},
 #' Malgorzata Bogdan, Ewout van den Berg, Chiara Sabatti,
@@ -43,8 +42,8 @@
 #' screening.result <- screen_snps(snpsFile, mapFile, phe, pValMax = 0.05, chunkSize = 1e2)
 #' clumping.result <- clump_snps(screening.result, rho = 0.3, verbose = TRUE)
 #' slope.result <- select_snps(clumping.result, fdr=0.1)
+#' 
 #' }
-#' \dontrun{
-#' gui_geneSLOPE()
-#' }
+#' 
+#' if(interactive()) { gui_geneSLOPE() }
 NULL

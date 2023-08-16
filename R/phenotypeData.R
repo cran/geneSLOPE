@@ -15,9 +15,11 @@ NULL
 
 #' Print phenotypeData class object
 #'
-#' @param x phenotypeData class object
+#' @param x \code{\link{phenotypeData}} class object
 #' @param ... Further arguments to be passed to or from other methods. They are ignored in this function.
 #' @export
+#' 
+#' @return No return value, called for side effects
 #'
 #' @method print phenotypeData
 print.phenotypeData <- function(x, ...){
@@ -30,9 +32,11 @@ print.phenotypeData <- function(x, ...){
 
 #' Summary phenotypeData class object
 #'
-#' @param object phenotypeData class object
+#' @param object \code{\link{phenotypeData}} class object
 #' @param ... Further arguments to be passed to or from other methods. They are ignored in this function.
 #' @export
+#' 
+#' @return No return value, called for side effects
 #'
 #' @method summary phenotypeData
 summary.phenotypeData <- function(object, ...){

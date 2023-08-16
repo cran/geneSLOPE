@@ -7,11 +7,13 @@
 \method{print}{phenotypeData}(x, ...)
 }
 \arguments{
-\item{x}{phenotypeData class object}
+\item{x}{\code{\link{phenotypeData}} class object}
 
 \item{...}{Further arguments to be passed to or from other methods. They are ignored in this function.}
+}
+\value{
+No return value, called for side effects
 }
 \description{
 Print phenotypeData class object
 }
-

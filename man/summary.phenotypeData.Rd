@@ -7,11 +7,13 @@
 \method{summary}{phenotypeData}(object, ...)
 }
 \arguments{
-\item{object}{phenotypeData class object}
+\item{object}{\code{\link{phenotypeData}} class object}
 
 \item{...}{Further arguments to be passed to or from other methods. They are ignored in this function.}
+}
+\value{
+No return value, called for side effects
 }
 \description{
 Summary phenotypeData class object
 }
-

@@ -4,11 +4,10 @@
 \alias{plot.selectionResult}
 \title{Plot selectionResult class object}
 \usage{
-\method{plot}{selectionResult}(x, chromosomeNumber = NULL,
-  clumpNumber = NULL, ...)
+\method{plot}{selectionResult}(x, chromosomeNumber = NULL, clumpNumber = NULL, ...)
 }
 \arguments{
-\item{x}{selectionResult class object}
+\item{x}{\code{\link{selectionResult}} class object}
 
 \item{chromosomeNumber}{optional parameter, only selected chromosome will be plotted}
 
@@ -16,7 +15,9 @@
 
 \item{...}{Further arguments to be passed to or from other methods. They are ignored in this function.}
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Plot selectionResult class object
 }
-

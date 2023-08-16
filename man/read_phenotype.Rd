@@ -4,20 +4,20 @@
 \alias{read_phenotype}
 \title{Read phenotype from .fam file}
 \usage{
-read_phenotype(filename, sep = " ", header = FALSE,
-  stringAsFactors = FALSE)
+read_phenotype(filename, sep = " ", header = FALSE, stringAsFactors = FALSE)
 }
 \arguments{
-\item{filename}{character, name of file with phenotype}
+\item{filename}{character, name of file with phenotype.}
 
-\item{sep}{character, field seperator in file}
+\item{sep}{character, field seperator in file.}
 
-\item{header}{logical, does first row of file contain variables names}
+\item{header}{logical, does first row of file contain variables names.}
 
 \item{stringAsFactors}{logical, should character vectors be converted to factors?}
 }
 \value{
-object of class phenotypeData
+object of class \code{\link{phenotypeData}}. 
+See the class documentation for details.
 }
 \description{
 Reading phenotype data from file. It is assumed, that data is given in .fam file.
@@ -27,4 +27,3 @@ fifth is SEX and sixth and last is PHENOTYPE.
 If file has only four columns, then it is assumed that PAT and MAT columns are missing.
 If there is only one column, then it is assumed that only phenotype is provided.
 }
-
