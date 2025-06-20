@@ -14,23 +14,22 @@ select_snps(
 )
 }
 \arguments{
-\item{clumpingResult}{object of class \code{\link{clumpingResult}}, 
-clumpProcedure output.}
+\item{clumpingResult}{clumpProcedure output}
 
-\item{fdr, }{numeric, False Discovery Rate for SLOPE.}
+\item{fdr, }{numeric, False Discovery Rate for SLOPE}
 
 \item{type}{method for snp selection. slope (default value) is SLOPE
-on clump representatives, smt is the Benjamini-Hochberg procedure on
-single marker test p-values for clump representatives.}
+on clump representatives, smt is Benjamini-Hochberg procedure on
+single marker test p-values for clump representatives}
 
-\item{lambda}{lambda for SLOPE. See \code{\link{create_lambda}}.}
+\item{lambda}{lambda for SLOPE. See \code{\link{create_lambda}}}
 
-\item{sigma}{numeric, sigma for SLOPE.}
+\item{sigma}{numeric, sigma for SLOPE}
 
-\item{verbose}{logical, if TRUE progress bar is printed.}
+\item{verbose}{logical, if TRUE progress bar is printed}
 }
 \value{
-object of class \code{\link{selectionResult}}.
+object of class \code{\link{selectionResult}}
 }
 \description{
 Performs GWAS with SLOPE on given snp matrix and phenotype.
@@ -40,13 +39,7 @@ Then SLOPE is used on snp matrix which contains
 one representative for each clump.
 }
 \examples{
-\donttest{
-famFile <- system.file("extdata", "plinkPhenotypeExample.fam", package = "geneSLOPE")
-mapFile <- system.file("extdata", "plinkMapExample.map", package = "geneSLOPE")
-snpsFile <- system.file("extdata", "plinkDataExample.raw", package = "geneSLOPE")
-phe <- read_phenotype(filename = famFile)
-screening.result <- screen_snps(snpsFile, mapFile, phe, pValMax = 0.05, chunkSize = 1e2)
-clumping.result <- clump_snps(screening.result, rho = 0.3, verbose = TRUE)
+\dontrun{
 slope.result <- select_snps(clumping.result, fdr=0.1)
 }
 }

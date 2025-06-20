@@ -4,9 +4,8 @@
 #' Return clump number.
 #'
 #' @title identify_clump
-#' @param x appropriate class object
+#' @param x appropiate class object
 #' @param ... other arguments
-#' @return No return value, called for side effects
 #'
 #' @rdname identify_clump
 #' @export identify_clump
@@ -15,11 +14,11 @@ identify_clump <- function(x, ...){
 }
 
 
-#' Identify clump number in \code{\link{clumpingResult}} class plot
+#' Identify clump number in clumpingResult class plot
 #'
-#' @param x \code{\link{clumpingResult}} class object
+#' @param x clumpingResult class object
 #' @param ... Further arguments to be passed to or from other methods. They are ignored in this function.
-#' @return No return value, called for side effects
+#'
 #' @export
 #'
 identify_clump.clumpingResult <- function(x, ...) {
@@ -37,21 +36,21 @@ identify_clump.clumpingResult <- function(x, ...) {
   a <- plot.data$snp
   b <- plot.data$val
 
-  grid::downViewport("layout")
-  tmp = as.numeric(grid::grid.locator(unit = "npc"))
-  tmp.n <- as.numeric(tmp)*c(max(chromosome_limits_max)*1.33, 1.33*max(plot.data$val))
+  downViewport("layout")
+  tmp = as.numeric(grid.locator(unit = "npc"))
+  tmp.n <- as.numeric(tmp)*c(max(chromosome_limits_max)+1, 1.1*max(plot.data$val))
   diff.a <- (a-tmp.n[1])^2
   diff.b <- (b-tmp.n[2])^2
-  grid::upViewport(n = 0)
+  upViewport(n = 0)
   paste("Selected SNP is in clump",
         plot.data$clump[which.min(diff.a/max(diff.a) + diff.b/max(diff.b))])
 }
 
-#' Identify clump number in \code{\link{selectionResult}} class plot
+#' Identify clump number in selectionResult class plot
 #'
-#' @param x \code{\link{selectionResult}} class object
+#' @param x selectionResult class object
 #' @param ... Further arguments to be passed to or from other methods. They are ignored in this function.
-#' @return No return value, called for side effects
+#'
 #' @export
 identify_clump.selectionResult <- function(x, ...) {
   plot.data <- create_slope_plot_data(x)
@@ -68,12 +67,12 @@ identify_clump.selectionResult <- function(x, ...) {
   a <- plot.data$snp
   b <- plot.data$val
 
-  grid::downViewport("layout")
-  tmp <- as.numeric(grid::grid.locator(unit = "npc"))
-  tmp.n <- as.numeric(tmp)*c(max(chromosome_limits_max)*1.33, 1.33*max(plot.data$val))
+  downViewport("layout")
+  tmp <- as.numeric(grid.locator(unit = "npc"))
+  tmp.n <- as.numeric(tmp)*c(max(chromosome_limits_max)+1, 1.1*max(plot.data$val))
   diff.a <- (a-tmp.n[1])^2
   diff.b <- (b-tmp.n[2])^2
-  grid::upViewport(n = 0)
+  upViewport(n = 0)
   paste("Selected SNP is in clump",
         plot.data$clump[which.min((a - tmp.n[1])^2 + (b - tmp.n[2])^2)])
 }

@@ -1,6 +1,7 @@
 [![R build status](https://github.com/psobczyk/geneSLOPE/workflows/R-CMD-check/badge.svg)](https://github.com/psobczyk/geneSLOPE/actions?query=workflow%3AR-CMD-check)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/geneSLOPE)](https://cran.r-project.org/package=geneSLOPE)
-[![Downloads](http://cranlogs.r-pkg.org/badges/geneSLOPE)](https://cran.r-project.org/package=geneSLOPE)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/geneSLOPE)](https://CRAN.R-project.org/package=geneSLOPE)
+[![Downloads](https://cranlogs.r-pkg.org/badges/geneSLOPE)](https://CRAN.R-project.org/package=geneSLOPE)
+
 [<img src="http://www.ideal.rwth-aachen.de/wp-content/uploads/2013/08/banner1.png">](http://www.ideal.rwth-aachen.de/)
 
 -------------
@@ -11,11 +12,14 @@
 Package **geneSLOPE** can be used to perform Genome-wide association study with 
 [SLOPE](https://candes.su.domains/software/SortedL1/). 
 
-Such an analysis is split into three steps.
+Such an analysis  is split into three steps.
 
-1. Data is read and immediately screened using a marginal test for each SNP.
-2. SNPs are clumped based on correlations.
-3. SLOPE is performed on reduced data. Each clump is represented by one SNP.
+1. Data is read and immediately screened using marginal test for each SNP
+
+2. SNPs are clumped based on correlations
+
+3. SLOPE is performed on reduced data. Each clump is
+represented by one SNP
 
 -------------------------
 

@@ -7,12 +7,9 @@
 \method{summary}{screeningResult}(object, ...)
 }
 \arguments{
-\item{object}{\code{\link{screeningResult}} class object}
+\item{object}{screeningResult class object}
 
 \item{...}{Further arguments to be passed to or from other methods. They are ignored in this function.}
-}
-\value{
-No return value, called for side effects
 }
 \description{
 Summary function for class screeningResult

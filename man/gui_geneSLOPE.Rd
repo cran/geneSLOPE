@@ -7,7 +7,7 @@
 gui_geneSLOPE()
 }
 \value{
-No return value, called for side effects
+null
 }
 \description{
 A graphical user interface for performing Genome-wide

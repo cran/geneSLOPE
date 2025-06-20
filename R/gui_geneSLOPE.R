@@ -5,7 +5,7 @@
 #'
 #' @details requires installing \pkg{\link[shiny]{shiny}} package
 #'
-#' @return No return value, called for side effects
+#' @return null
 #' @export
 gui_geneSLOPE <- function() {
   appDir <- system.file("shiny-examples", "genSLOPE_gui", package = "geneSLOPE")

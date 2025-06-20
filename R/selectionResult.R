@@ -33,7 +33,7 @@
 #' data.frame are related to snps that passed screening
 #' \item \code{numberOfSnps} numeric, total number of SNPs before screening procedure
 #' \item \code{pValMax} numeric, p-value used in screening procedure
-#' \item \code{fdr} numeric, false discovery rate used by \code{\link{SLOPE}}
+#' \item \code{fdr} numeric, false discovery rate used by \code{\link[SLOPE]{SLOPE}}
 #' }
 #' @seealso \code{\link{screeningResult}} \code{\link{clumpingResult}}
 #' \code{\link{select_snps}} \code{\link[SLOPE]{SLOPE}}
@@ -45,7 +45,7 @@ NULL
 #'
 #' @param x selectionResult class object
 #' @param ... Further arguments to be passed to or from other methods. They are ignored in this function.
-#' @return No return value, called for side effects
+#' @return Nothing.
 #' @export
 #'
 #' @method print selectionResult
@@ -89,12 +89,10 @@ print.selectionResult <- function(x, ...){
 
 #' Summary selectionResult class object
 #'
-#' @param object \code{\link{selectionResult}} class object
+#' @param object selectionResult class object
 #' @param clumpNumber number of clump to be summarized
 #' @param ... Further arguments to be passed to or from other methods. They are ignored in this function.
 #' @export
-#' 
-#' @return No return value, called for side effects
 #'
 #' @method summary selectionResult
 summary.selectionResult <- function(object, clumpNumber = NULL, ...){
@@ -126,13 +124,10 @@ summary.selectionResult <- function(object, clumpNumber = NULL, ...){
 
 #' Plot selectionResult class object
 #'
-#' @param x \code{\link{selectionResult}} class object
+#' @param x selectionResult class object
 #' @param chromosomeNumber optional parameter, only selected chromosome will be plotted
 #' @param clumpNumber optional parameter, only SNPs from selected clump will be plotted
 #' @param ... Further arguments to be passed to or from other methods. They are ignored in this function.
-#' 
-#' @return No return value, called for side effects
-#' 
 #' @export
 plot.selectionResult <- function(x, chromosomeNumber=NULL, clumpNumber=NULL, ...){
   chromosome <- snp <- val <- clump <- representatives <- NULL #to remove CRAN's NOTE
@@ -142,6 +137,9 @@ plot.selectionResult <- function(x, chromosomeNumber=NULL, clumpNumber=NULL, ...
   }
   if(!is.null(x$X_info)){
     plot.data <- create_slope_plot_data(x)
+    # granice <- aggregate(x$X_info[,3], list(x$X_info[,1]), max)
+    # granice_max <- cumsum(granice$x)
+    # granice$x <- c(0,head(cumsum(granice$x),-1))
 
     if(length(unique(x$X_info[,3])) == 1){
       chromosome_limits <- aggregate(x$X_info[,4], list(x$X_info[,1]), max)

@@ -2,18 +2,15 @@
 % Please edit documentation in R/clumpingResult.R
 \name{print.clumpingResult}
 \alias{print.clumpingResult}
-\title{Print \code{\link{clumpingResult}} class object}
+\title{Print clumpingResult class object}
 \usage{
 \method{print}{clumpingResult}(x, ...)
 }
 \arguments{
-\item{x}{\code{\link{clumpingResult}} class object}
+\item{x}{clumpingResult class object}
 
 \item{...}{Further arguments to be passed to or from other methods. They are ignored in this function.}
 }
-\value{
-No return value, called for side effects
-}
 \description{
-Print \code{\link{clumpingResult}} class object
+Print clumpingResult class object
 }

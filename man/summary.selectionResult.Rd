@@ -7,14 +7,11 @@
 \method{summary}{selectionResult}(object, clumpNumber = NULL, ...)
 }
 \arguments{
-\item{object}{\code{\link{selectionResult}} class object}
+\item{object}{selectionResult class object}
 
 \item{clumpNumber}{number of clump to be summarized}
 
 \item{...}{Further arguments to be passed to or from other methods. They are ignored in this function.}
-}
-\value{
-No return value, called for side effects
 }
 \description{
 Summary selectionResult class object

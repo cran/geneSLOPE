@@ -8,13 +8,12 @@
 #' If there is only one column, then it is assumed that only phenotype is provided.
 #'
 #' @export
-#' @param filename character, name of file with phenotype.
-#' @param sep character, field seperator in file.
-#' @param header logical, does first row of file contain variables names.
+#' @param filename character, name of file with phenotype
+#' @param sep character, field seperator in file
+#' @param header logical, does first row of file contain variables names
 #' @param stringAsFactors logical, should character vectors be converted to factors?
 #'
-#' @return object of class \code{\link{phenotypeData}}. 
-#' See the class documentation for details. 
+#' @return object of class phenotypeData
 #'
 read_phenotype <- function(filename, sep=" ", header=FALSE, stringAsFactors=FALSE){
   if(!file.exists(filename))

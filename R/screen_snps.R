@@ -4,15 +4,15 @@
 #' Additional information about SNP mapping is read from .map file.
 #'
 #' @export
-#' @param rawFile character, name of .raw file.
-#' @param mapFile character, name of .map file.
-#' @param phenotype numeric vector or an object of class \code{\link{phenotypeData}}.
-#' @param pValMax numeric, p-value threshold value used for screening.
+#' @param rawFile character, name of .raw file
+#' @param mapFile character, name of .map file
+#' @param phenotype numeric vector or an object of class \code{\link{phenotypeData}}
+#' @param pValMax numeric, p-value threshold value used for screening
 #' @param chunkSize integer, number of snps that will be processed together.
-#' The bigger the chunkSize is, the faster function works but
-#' computer might run out of RAM.
-#' @param verbose if TRUE (default) information about progress is printed.
-#' @return object of class \code{\link{screeningResult}}.
+#' The bigger chunkSize is, the faster function works but
+#' computer might run out of RAM
+#' @param verbose if TRUE (default) information about progress is printed
+#' @return object of class \code{\link{screeningResult}}
 #'
 #' @details \strong{Exporting data from PLINK}
 #' To import data to R, it needs to be exported from
@@ -39,7 +39,7 @@ screen_snps <- function(rawFile, mapFile="", phenotype, pValMax=0.05, chunkSize=
     message(".map file not found")
   }
 
-  if("phenotypeData" %in% class(phenotype)){
+  if (inherits(phenotype, "phenotypeData")){
     phenotypeInfo <- phenotype$yInfo
     y <- phenotype$y
   } else{

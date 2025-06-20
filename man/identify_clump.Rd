@@ -7,12 +7,9 @@
 identify_clump(x, ...)
 }
 \arguments{
-\item{x}{appropriate class object}
+\item{x}{appropiate class object}
 
 \item{...}{other arguments}
-}
-\value{
-No return value, called for side effects
 }
 \description{
 identify_clump
